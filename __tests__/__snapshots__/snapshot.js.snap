@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<div
+  className="container"
+>
+  <header
+    className="nav"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      <h1
+        className="brand"
+      >
+        Accounts Management
+      </h1>
+    </a>
+  </header>
+  <main
+    className="main"
+  >
+    <nav
+      className="menu"
+    >
+      <a
+        className="link"
+        href="/accounts"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Accounts Search
+      </a>
+    </nav>
+    <div
+      className="content"
+    >
+      <h2
+        className="title"
+      >
+        Welcome to Accounts Management
+      </h2>
+    </div>
+  </main>
+</div>
+`;
