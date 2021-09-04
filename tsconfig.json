@@ -14,6 +14,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "__tests__/index.test.jsx", "__mocks__/NotificationsProvider.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "__tests__/index.test.jsx", "__mocks__/NotificationsProvider.js", "pages/_document.tsx"],
   "exclude": ["node_modules"]
 }

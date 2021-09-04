@@ -7,19 +7,21 @@ import Document, {
 } from "next/document";
 import { SheetsRegistry, JssProvider, createGenerateId } from "react-jss";
 
-export default class _Document extends Document {
+class _Document extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const registry = new SheetsRegistry();
     const originalRenderPage = ctx.renderPage;
 
     ctx.renderPage = () =>
       originalRenderPage({
-        enhanceApp: (App) => (props) =>
-          (
-            <JssProvider registry={registry} generateId={createGenerateId()}>
-              <App {...props} />
-            </JssProvider>
-          ),
+        enhanceApp: (App) =>
+          function e(props) {
+            return (
+              <JssProvider registry={registry} generateId={createGenerateId()}>
+                <App {...props} />
+              </JssProvider>
+            );
+          },
       });
 
     const initialProps = await Document.getInitialProps(ctx);
@@ -47,3 +49,5 @@ export default class _Document extends Document {
     );
   }
 }
+
+export default _Document;
